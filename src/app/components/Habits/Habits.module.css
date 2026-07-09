@@ -1,0 +1,183 @@
+.section {
+  padding-block: var(--space-section);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: var(--gap-lg);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.slideWrap {
+  position: relative;
+  overflow: hidden;
+  min-height: 12.5rem;
+}
+
+.slideContent {
+  will-change: transform, opacity;
+}
+
+.fromRight {
+  animation: slideFromRight 0.5s var(--ease-cinematic);
+}
+
+.fromLeft {
+  animation: slideFromLeft 0.5s var(--ease-cinematic);
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(48px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-48px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fromRight,
+  .fromLeft {
+    animation: none;
+  }
+}
+
+.heading {
+  font-size: var(--fs-h2);
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  max-width: 30rem;
+  margin-bottom: 2rem;
+}
+
+.progress {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 3rem;
+}
+
+.dash {
+  height: 4px;
+  width: 4.5rem;
+  padding: 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-text-secondary);
+  transition:
+    background var(--dur-base) var(--ease-cinematic),
+    transform var(--dur-base) var(--ease-cinematic);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .dash:hover {
+    background: var(--color-text-primary);
+  }
+}
+
+.dash.active {
+  background: var(--color-accent);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .dash.active:hover {
+    background: var(--color-accent);
+  }
+}
+
+.mediaClip {
+  position: relative;
+  overflow: hidden;
+  height: clamp(20rem, 32vw, 26rem);
+}
+
+.mediaRow {
+  display: flex;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.primaryImage {
+  flex: 1.4;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  min-width: 0;
+}
+
+.primaryImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.primaryImage img.mirrored {
+  transform: scaleX(-1);
+}
+
+.sideStack {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.stopCard {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+  border-radius: var(--radius-card);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex: 0.45;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: var(--lh-tight);
+}
+
+.runnerImage {
+  flex: 1;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  min-height: 0;
+}
+
+.runnerImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .mediaClip {
+    order: -1;
+    height: 20rem;
+  }
+}

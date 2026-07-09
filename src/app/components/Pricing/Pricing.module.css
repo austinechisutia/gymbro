@@ -1,0 +1,93 @@
+.section {
+  padding-block: var(--space-section);
+}
+
+.heading {
+  font-size: var(--fs-h2);
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap-md);
+  align-items: center;
+}
+
+.card {
+  text-align: center;
+}
+
+.featured {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+  border-radius: var(--radius-plan);
+  padding: 2.75rem 2.5rem 2.5rem;
+}
+
+.planName {
+  font-size: var(--fs-plan-name);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.15rem;
+  font-size: var(--fs-plan-price);
+  font-weight: 800;
+  margin-bottom: 1.75rem;
+}
+
+.price span {
+  font-size: var(--fs-small);
+  font-weight: 400;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: 2.25rem;
+  text-align: left;
+}
+
+.card:not(.featured) .features {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.featured .features {
+  gap: 1.35rem;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: var(--fs-small);
+}
+
+.features li img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.fullBtn {
+  width: 100%;
+  max-width: 20rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .featured {
+    order: -1;
+  }
+}
