@@ -1,3 +1,4 @@
+import { Reveal } from "../Reveal/Reveal";
 import styles from "./CtaCommunity.module.css";
 
 const LINKS = ["Home", "Services", "About", "Contact"];
@@ -57,7 +58,9 @@ export function CtaCommunity() {
               </a>
             ))}
           </div>
-          <h2 className={styles.heading}>Join Our Community</h2>
+          <Reveal className={styles.heading}>
+            <h2>Join Our Community</h2>
+          </Reveal>
         </div>
 
         <div className={styles.divider} />

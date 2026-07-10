@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Reveal } from "../Reveal/Reveal";
 import styles from "./Testimonials.module.css";
 
 const REVIEWS = [
@@ -70,7 +71,7 @@ export function Testimonials() {
 
   return (
     <section className={styles.section} id="testimonials">
-      <div className="container">
+      <Reveal className="container">
         <h2 className={styles.heading}>What Our Members Are Saying</h2>
 
         <div className={styles.row}>
@@ -124,7 +125,7 @@ export function Testimonials() {
             <PhotoProfile />
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

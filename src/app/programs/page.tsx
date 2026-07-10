@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Button } from "../components/Button/Button";
 import { CtaCommunity } from "../components/CtaCommunity/CtaCommunity";
 import { PageHeader } from "../components/PageHeader/PageHeader";
+import { Reveal } from "../components/Reveal/Reveal";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -54,8 +55,13 @@ export default function ProgramsPage() {
 
       <section className={styles.section}>
         <div className={`container ${styles.grid}`}>
-          {PROGRAMS.map((program) => (
-            <article className={styles.card} key={program.title}>
+          {PROGRAMS.map((program, i) => (
+            <Reveal
+              as="article"
+              className={styles.card}
+              key={program.title}
+              delay={(i % 3) * 120}
+            >
               <div className={styles.media}>
                 <img src={program.image} alt="" aria-hidden="true" />
               </div>
@@ -64,7 +70,7 @@ export default function ProgramsPage() {
               <Button href="#" className={styles.cardBtn}>
                 Learn More
               </Button>
-            </article>
+            </Reveal>
           ))}
         </div>
       </section>

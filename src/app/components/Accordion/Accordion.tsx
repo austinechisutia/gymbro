@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Reveal } from "../Reveal/Reveal";
 import styles from "./Accordion.module.css";
 
 interface AccordionItem {
@@ -16,7 +17,7 @@ export function Accordion({ items }: { items: AccordionItem[] }) {
       {items.map((item, i) => {
         const isOpen = openIndex === i;
         return (
-          <div className={styles.item} key={item.question}>
+          <Reveal className={styles.item} key={item.question} delay={i * 80}>
             <button
               type="button"
               className={styles.trigger}
@@ -29,7 +30,7 @@ export function Accordion({ items }: { items: AccordionItem[] }) {
               </span>
             </button>
             {isOpen && <p className={styles.answer}>{item.answer}</p>}
-          </div>
+          </Reveal>
         );
       })}
     </div>

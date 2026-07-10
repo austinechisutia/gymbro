@@ -1,3 +1,4 @@
+import { Reveal } from "../Reveal/Reveal";
 import styles from "./WhyChoose.module.css";
 
 const FEATURE_TITLE = "Modern Equipment";
@@ -8,7 +9,7 @@ export function WhyChoose() {
   return (
     <section className={styles.section} id="why-choose">
       <div className={`container ${styles.grid}`}>
-        <div>
+        <Reveal>
           <h2 className={styles.heading}>Why Choose Our Gym</h2>
           <ul className={styles.list}>
             {[0, 1, 2, 3].map((i) => (
@@ -26,14 +27,14 @@ export function WhyChoose() {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
 
-        <div className={styles.media}>
+        <Reveal className={styles.media} delay={150}>
           <img
             src="/figma/why-choose-dumbbell-squat.png"
             alt="Member doing a dumbbell squat with headphones on"
           />
-        </div>
+        </Reveal>
       </div>
     </section>
   );

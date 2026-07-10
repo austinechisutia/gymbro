@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CtaCommunity } from "../components/CtaCommunity/CtaCommunity";
 import { PageHeader } from "../components/PageHeader/PageHeader";
+import { Reveal } from "../components/Reveal/Reveal";
 import { Testimonials } from "../components/Testimonials/Testimonials";
 import styles from "./page.module.css";
 
@@ -36,11 +37,11 @@ export default function TransformationsPage() {
 
       <section className={styles.stats}>
         <div className={`container ${styles.statsGrid}`}>
-          {STATS.map((stat) => (
-            <div className={styles.stat} key={stat.label}>
+          {STATS.map((stat, i) => (
+            <Reveal className={styles.stat} key={stat.label} delay={i * 120}>
               <p className={styles.statValue}>{stat.value}</p>
               <p className={styles.statLabel}>{stat.label}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -49,12 +50,18 @@ export default function TransformationsPage() {
 
       <section className={styles.gallerySection}>
         <div className="container">
-          <h2 className={styles.galleryHeading}>Snapshots From The Floor</h2>
+          <Reveal>
+            <h2 className={styles.galleryHeading}>Snapshots From The Floor</h2>
+          </Reveal>
           <div className={styles.gallery}>
             {GALLERY.map((src, i) => (
-              <div className={styles.galleryItem} key={src + i}>
+              <Reveal
+                className={styles.galleryItem}
+                key={src + i}
+                delay={(i % 3) * 100}
+              >
                 <img src={src} alt="" aria-hidden="true" />
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

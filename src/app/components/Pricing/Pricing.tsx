@@ -1,4 +1,5 @@
 import { Button } from "../Button/Button";
+import { Reveal } from "../Reveal/Reveal";
 import styles from "./Pricing.module.css";
 
 const CHECK_LIME = "/figma/check-icon-1.svg";
@@ -53,12 +54,15 @@ export function Pricing() {
   return (
     <section className={styles.section} id="pricing">
       <div className="container">
-        <h2 className={styles.heading}>Perfect Plan For Your Fitness Goals</h2>
+        <Reveal>
+          <h2 className={styles.heading}>Perfect Plan For Your Fitness Goals</h2>
+        </Reveal>
         <div className={styles.grid}>
-          {PLANS.map((plan) => (
-            <div
+          {PLANS.map((plan, i) => (
+            <Reveal
               className={`${styles.card} ${plan.featured ? styles.featured : ""}`}
               key={plan.name}
+              delay={i * 120}
             >
               <p className={styles.planName}>{plan.name}</p>
               <p className={styles.price}>
@@ -80,7 +84,7 @@ export function Pricing() {
               >
                 Join Now
               </Button>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "../Button/Button";
+import { Reveal } from "../Reveal/Reveal";
 import styles from "./Habits.module.css";
 
 const SLIDES = [
@@ -66,7 +67,7 @@ export function Habits() {
 
   return (
     <section className={styles.section} id="habits">
-      <div className={`container ${styles.grid}`}>
+      <Reveal className={`container ${styles.grid}`}>
         <div className={styles.copy}>
           <div className={styles.slideWrap}>
             <div key={index} className={`${styles.slideContent} ${animClass}`}>
@@ -117,7 +118,7 @@ export function Habits() {
             </div>
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
