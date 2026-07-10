@@ -30,8 +30,8 @@ export function WhyChoose() {
 
         <div className={styles.media}>
           <img
-            src="/figma/why-choose.png"
-            alt="Member training with battle ropes"
+            src="/figma/why-choose-dumbbell-squat.png"
+            alt="Member doing a dumbbell squat with headphones on"
           />
         </div>
       </div>

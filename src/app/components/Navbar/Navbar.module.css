@@ -2,6 +2,10 @@
   position: sticky;
   top: 0;
   z-index: 50;
+  background: rgba(1, 1, 1, 0.25);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border-bottom: 1px solid var(--color-surface-border);
 }
 
 .inner {
@@ -9,7 +13,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--gap-md);
-  padding-block: 2.375rem;
+  padding-block: 1.25rem;
 }
 
 .logo {
@@ -31,7 +35,7 @@
   color: var(--color-text-primary);
 }
 
-.links .homeActive {
+.links .active {
   color: var(--color-accent);
 }
 

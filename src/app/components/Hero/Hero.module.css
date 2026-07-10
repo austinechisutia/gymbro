@@ -23,7 +23,7 @@
   z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
-  align-items: center;
+  align-items: start;
   gap: var(--gap-lg);
 }
 
@@ -112,7 +112,7 @@
 
 .mediaWrap {
   position: relative;
-  height: clamp(24rem, 40vw, 34rem);
+  height: clamp(28rem, 46vw, 40rem);
   display: flex;
   justify-content: center;
 }
@@ -131,9 +131,9 @@
 .heroImage {
   position: relative;
   z-index: 1;
-  width: 88%;
+  width: 104%;
   height: auto;
-  max-width: 30rem;
+  max-width: 36rem;
   object-fit: contain;
   align-self: center;
 }

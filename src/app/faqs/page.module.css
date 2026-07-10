@@ -1,0 +1,7 @@
+.section {
+  padding-block: var(--space-section);
+}
+
+.wrap {
+  max-width: 48rem;
+}
