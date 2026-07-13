@@ -6,9 +6,9 @@ import { Testimonials } from "../components/Testimonials/Testimonials";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Transformations — Atomic Fitness",
+  title: "Transformations — Fitness",
   description:
-    "Real results from real Atomic Fitness members — strength gained, habits built, lives changed.",
+    "Real results from real Fitness members — strength gained, habits built, lives changed.",
 };
 
 const STATS = [

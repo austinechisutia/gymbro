@@ -4,7 +4,7 @@ import { PageHeader } from "../components/PageHeader/PageHeader";
 import { Pricing } from "../components/Pricing/Pricing";
 
 export const metadata: Metadata = {
-  title: "Pricing — Atomic Fitness",
+  title: "Pricing — Fitness",
   description:
     "Simple, transparent membership plans for every fitness goal. Cancel anytime.",
 };

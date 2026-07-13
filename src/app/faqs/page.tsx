@@ -5,8 +5,8 @@ import { PageHeader } from "../components/PageHeader/PageHeader";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "FAQs — Atomic Fitness",
-  description: "Answers to the most common questions about Atomic Fitness.",
+  title: "FAQs — Fitness",
+  description: "Answers to the most common questions about Fitness.",
 };
 
 const FAQS = [

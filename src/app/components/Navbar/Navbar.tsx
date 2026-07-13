@@ -20,7 +20,7 @@ export function Navbar() {
     <header className={styles.navbar}>
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.logo}>
-          Atomic Fitness
+          Fitness
         </Link>
         <nav className={styles.links}>
           {LINKS.map((link) => (

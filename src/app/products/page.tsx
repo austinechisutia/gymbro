@@ -6,9 +6,9 @@ import { Reveal } from "../components/Reveal/Reveal";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Products — Atomic Fitness",
+  title: "Products — Fitness",
   description:
-    "Shop Atomic Fitness apparel and gear — tees, pullovers, gloves, and everyday training essentials.",
+    "Shop Fitness apparel and gear — tees, pullovers, gloves, and everyday training essentials.",
 };
 
 function BandIcon() {

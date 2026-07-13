@@ -6,7 +6,7 @@ import { Reveal } from "../components/Reveal/Reveal";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Programs — Atomic Fitness",
+  title: "Programs — Fitness",
   description:
     "Strength, conditioning, mobility, and coaching programs built around your goals.",
 };
