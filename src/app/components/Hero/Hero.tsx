@@ -49,11 +49,14 @@ export function Hero() {
             alt=""
             aria-hidden="true"
           />
-          <img
-            className={styles.heroImage}
-            src="/figma/hero-person.png"
-            alt="Man doing dumbbell squats with headphones on"
-          />
+          <picture className={styles.heroImageContainer}>
+            <source media="(max-width: 900px)" srcSet="/figma/cta-community.png" />
+            <img
+              className={styles.heroImage}
+              src="/figma/hero-person.png"
+              alt="Man doing dumbbell squats with headphones on"
+            />
+          </picture>
           <img
             className={styles.sparkleLarge}
             src="/figma/sparkle-large.svg"
